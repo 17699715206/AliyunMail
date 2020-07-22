@@ -1,0 +1,11 @@
+# 测试数据
+-
+  url: 'https://mail.aliyun.com/'
+  #正确账户密码登录
+  data:
+    user: im.wangziyi
+    pasw: qwer1234...
+    #错误账户密码登录
+  wrongdata:
+    user: im.wangziyi
+    pasw: qwer1234....

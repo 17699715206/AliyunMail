@@ -1,0 +1,14 @@
+# 项目用到的驱动和项目初始化
+ie_browser_path: C:\Program Files\Internet Explorer\iexplore.exe
+360_browser_path:
+qq_browser_path:
+baidu_browser_path:
+sougou_browser_path:
+uc_browser_path:
+chrome_browser_path: C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+firefox_browser_path: D:\Program Files\Mozilla Firefox\firefox.exe
+edge_browser_path: C:\Program Files (x86)\Microsoft\Edge\Application\83.0.478.58\msedge.exe
+
+browser:
+  name: chrome
+  mode: normal #headless表示谷歌headles模式, normal，grid,docker

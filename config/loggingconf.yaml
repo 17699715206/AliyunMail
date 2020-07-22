@@ -1,0 +1,35 @@
+# logging 配置文件
+version: 1
+disable_existing_loggers: False
+#Formatter 格式化器，指明了最终输出中日志记录的布局。
+formatters:
+    simple:
+        format: "%(asctime)s - %(filename)s - %(levelname)s - %(message)s"
+        # datefmt: "%Y-%m-%d,%H:%M:%S"
+#Logger 记录器，暴露了应用程序代码能直接使用的接口。
+loggers:
+   my_module:
+       level: ERROR
+       handlers: [console]
+       propagate: no
+
+root:
+   level: INFO
+   handlers: [console, info_file_handler]
+#Handler 处理器，将（记录器产生的）日志记录发送至合适的目的地。
+handlers:
+  #创建一个console，级别为DEBUG，输出打印到控制台
+   console:
+      class: logging.StreamHandler
+      level: DEBUG
+      formatter: simple
+      stream: ext://sys.stdout
+   #创建一个info_file_handler，级别为DEBUG，输出到info.log文件
+   info_file_handler:
+       class: logging.handlers.RotatingFileHandler
+       level: DEBUG
+       formatter: simple
+       filename: ./logs/info.log
+       #maxBytes: 10485760 # 10MB
+       #backupCount: 20
+       encoding: utf8
