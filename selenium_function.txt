@@ -1,6 +1,3 @@
-Python+Selenium
-2020年1月6日
-20:09
  
 selenium+Python环境配置
 1.安装Python开发环境
